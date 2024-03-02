@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: White;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111;
+                }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <table width="100%">
+
+                <tr align="center">
+                    <td>
+                        <img src="img/mobilevendor.jpg" alt="BANNER OF WEBSITE" width="100%"
+                            style="height: 200px;" />
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <ul>
+                            <li><a href="index.aspx">
+                                <asp:Label ID="Label5" runat="server" Text="HOME"></asp:Label></a></li>
+                            <li><a href="product.aspx">
+                                <asp:Label ID="Label4" runat="server" Text="PRODUCT"></asp:Label></a></li>
+                            <li><a href="AddToCart.aspx">
+                                <asp:Label ID="Label3" runat="server" Text="CART"></asp:Label></a></li>
+                            <li><a href="feedback.aspx">
+                                <asp:Label ID="Label2" runat="server" Text="FEEDBACK"></asp:Label></a></li>
+                            <li><a href="changepassword.aspx">
+                                <asp:Label ID="Label1" runat="server" Text="CHANGE PASSWORD"></asp:Label></a></li>
+                            <li><a href="fpassword.aspx">
+                                <asp:Label ID="Label6" runat="server" Text="FORGOT PASSWORD"></asp:Label></a></li>
+                            <li style="float: right"><a href="reg.aspx">
+                                <asp:Label ID="Label7" runat="server" Text="REGISTARATION"></asp:Label></a></li>
+                            <li style="float: right"><a href="login.aspx">
+                                <asp:Label ID="Loginbutton" runat="server" Text="LOGIN"></asp:Label></a></li>
+                            <li style="float: right"><a>
+                                <asp:Label ID="lblemail" runat="server" Text=""></asp:Label></a></li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div class="footer">
+            <h3><b><i>Copyright © 2020 -21   Online Mobile Shop Private Limited, India. All rights reserved.</i></b></h3>
+        </div>
+    </form>
+</body>
+</html>
